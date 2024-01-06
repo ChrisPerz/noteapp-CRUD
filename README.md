@@ -5,11 +5,14 @@ This is a simple note-taking application created with FastAPI on the backend and
 **Create Note**: Users can create new notes by providing a title, a message, and an optional category.
 
 **Update Note**: Users can update the title, message, category, and archived status of their existing notes.
+
 **List Notes**: Users can view all their notes, filter by archived notes, and see only active notes.
+
 **Archive/Unarchive Note**: Users can change the archived status of their notes, with the option to activate.
 
 ## Technologies Used
 Backend: FastAPI/Python with SQLAlchemy and PostgreSQL.
+
 Frontend: React with Vite.
 
 ## Installation
@@ -23,6 +26,7 @@ Have PostgreSQL installed, it can be downloaded from: https://www.postgresql.org
 Start the pgAdmin4 program, you can search for it in the Windows search bar. Then create a PostgreSQL user, the default is "postgres," it is recommended to leave it like that and set the password of your choice.
 
 Enter the downloaded Backend folder from the repository and modify the database URLs to match your local database. To do this, change the links in these files, where it is underscored:
+
 a) alembic.ini - sqlalchemy.url
 
 ![image](https://github.com/ensolvers-github-challenges/PerezCastillo-87732d/assets/128911355/3e582274-d0c9-4c07-8ca6-720c17b74cbc)
