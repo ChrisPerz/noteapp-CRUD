@@ -11,3 +11,8 @@ engine=create_engine(f"postgresql://postgres:{secret}@localhost/notes_db", echo=
 Base=declarative_base()
 
 SessionLocal=sessionmaker(bind=engine,autocommit=False, autoflush=False)
+
+
+
+def init_db():
+    Base.metadata.create_all(bind=engine)
