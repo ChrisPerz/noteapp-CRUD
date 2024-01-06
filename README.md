@@ -40,6 +40,8 @@ c) app>database.py
 
 ![image](https://github.com/ensolvers-github-challenges/PerezCastillo-87732d/assets/128911355/aa90c2e6-869e-4908-bc0d-665877802a35)
 
+**Note: In the run_app.sh script, you can see the commands to follow from step 5 to 8**
+
 5. Create a virtual environment with the terminal inside the Backend folder, depending on the operating system, change the command:
 source venv/bin/activate # Linux/Mac
 \venv\Scripts\activate # Windows
@@ -48,7 +50,6 @@ source venv/bin/activate # Linux/Mac
 8. For the frontend, inside the frontend folder, use the terminal with the command npm install and then npm run dev
 
 You can now use the application from the link provided in the terminal.
-**Note: In the run_app.sh script, you can see the commands to follow from step 5 to 8**
 
 ## Libraries and their Used Versions
 For the backend, the libraries are listed in the requirements.txt file, in the Backend>requirements.txt path.
