@@ -20,7 +20,6 @@ def get_notes_by_category(db: Session, category: str = ""):
 
 def update_note(db: Session, noteId: int, title: str, message: str,is_archived: bool= False, category: str = ""):
     db_note = db.query(NoteDB).filter(NoteDB.id == noteId).first()
-    print("RECIVED IS ARCHIVEDDDDDD:", is_archived)
     if db_note:
         db_note.title = title
         db_note.message = message

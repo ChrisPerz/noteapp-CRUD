@@ -12,7 +12,7 @@ load_dotenv()
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
 config = context.config
-config.set_main_option('sqlalchemy.url', 'postgresql://postgres:end9099@localhost/notes_db')
+config.set_main_option('sqlalchemy.url', 'postgresql://postgres:password@localhost/notes_db')
 
 from app.database import Base
 
