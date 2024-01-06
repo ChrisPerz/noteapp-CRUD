@@ -1,46 +1,51 @@
-# Notas App
+# Notes App
+This is a simple note-taking application created with FastAPI on the backend and React on the frontend. The application allows users to create, update, archive, and view their notes.
 
-Esta es una aplicación simple de notas creada con FastAPI en el backend y React en el frontend. La aplicación permite a los usuarios crear, actualizar, archivar y ver sus notas.
+## Features
+Create Note: Users can create new notes by providing a title, a message, and an optional category.
+Update Note: Users can update the title, message, category, and archived status of their existing notes.
+List Notes: Users can view all their notes, filter by archived notes, and see only active notes.
+Archive/Unarchive Note: Users can change the archived status of their notes, with the option to activate.
 
-## Características
+## Technologies Used
+Backend: FastAPI/Python with SQLAlchemy and PostgreSQL.
+Frontend: React with Vite.
 
-- **Crear Nota**: Los usuarios pueden crear nuevas notas proporcionando un título, un mensaje y una categoría opcional.
-- **Actualizar Nota**: Los usuarios pueden actualizar el título, el mensaje, la categoría y el estado de archivado de sus notas existentes.
-- **Listar Notas**: Los usuarios pueden ver todas sus notas, filtrar por notas archivadas y ver solo las notas activas.
-- **Archivar/Desarchivar Nota**: Los usuarios pueden cambiar el estado de archivado de sus notas, con la opcion activar.
+## Installation
+Clone the repository:
 
-## Tecnologías Utilizadas
 
-- **Backend**: FastAPI/Python con SQLAlchemy y PostgreSQL.
-- **Frontend**: React con Vite.
+git clone [https://github.com/ensolvers-github-challenges/PerezCastillo-87732d.git]
 
-## Instalación
+Have PostgreSQL installed, it can be downloaded from: https://www.postgresql.org/download/
 
-1. Clona el repositorio:
+Start the pgAdmin4 program, you can search for it in the Windows search bar. Then create a PostgreSQL user, the default is "postgres," it is recommended to leave it like that and set the password of your choice.
 
-   ```bash
-   git clone [https://github.com/ensolvers-github-challenges/PerezCastillo-87732d.git]
+Enter the downloaded Backend folder from the repository and modify the database URLs to match your local database. To do this, change the links in these files, where it is underscored:
+a) alembic.ini - sqlalchemy.url
 
-2. Tener instalado PostgreSQL, se puede descargar desde:https://www.postgresql.org/download/
-3. Iniciar el programa pgAdmin4, Lo puede buscar en el buscador de windows. Posteriormente crear un usuario postgreSQL, el predeterminado es postgre, se recomienda dejarlo asi y colocar la contraseña que prefiera.
-4. Entrar a la carpeta Backend descargada desde el repositorio y modificar las URL de la base de datos para que correspondan con tu base de datos local, para ello cambia los link de estos archivos, donde se muestra subrayado:
-  a)alembic.ini - sqlalchemy.url
-   ![image](https://github.com/ensolvers-github-challenges/PerezCastillo-87732d/assets/128911355/3e582274-d0c9-4c07-8ca6-720c17b74cbc)
-  b) alembic>env.py
-    ![image](https://github.com/ensolvers-github-challenges/PerezCastillo-87732d/assets/128911355/b3f0fa1b-c858-44a5-b686-cf22358d7881)
-  c) app>database.py
-    ![image](https://github.com/ensolvers-github-challenges/PerezCastillo-87732d/assets/128911355/aa90c2e6-869e-4908-bc0d-665877802a35)
+![image](https://github.com/ensolvers-github-challenges/PerezCastillo-87732d/assets/128911355/3e582274-d0c9-4c07-8ca6-720c17b74cbc)
 
-5. Crear un entorno virtual con el terminal dentro de la carpeta Backend, dependiendo el sistema operativo cambia el comando:
-   source venv/bin/activate  # Linux/Mac
-    \venv\Scripts\activate  # Windows 
-6. Instalar las dependencias del backend con la terminal y el comando: pip install -r requirements.txt
-7. Ejecutar main.py de la carpeta Backend>app>main.py, se puede usar el comando: python -m app.main o python app/main.py
-8. Para el front end, dentro de la carpeta frontend con la terminal usar el comando npm install y luego npm run dev
-9. Ya puede usar la aplicacion desde el link otorgado en la terminal.
+b) alembic>env.py
 
-   ## Nota: en el Script run_app.sh se ve los comandos a seguir desde el punto 5 al 9
 
-## Librerias y sus versiones usadas
--Para el backend las librerias se encuentran listadas en el archivo requirements.txt, en la ruta Backend>requirements.txt
--Para el front end las librerias se encuentran listadas en el archivo package.json, en la ruta Frontend>src>package.json
+![image](https://github.com/ensolvers-github-challenges/PerezCastillo-87732d/assets/128911355/b3f0fa1b-c858-44a5-b686-cf22358d7881)
+
+c) app>database.py
+
+
+![image](https://github.com/ensolvers-github-challenges/PerezCastillo-87732d/assets/128911355/aa90c2e6-869e-4908-bc0d-665877802a35)
+
+6. Create a virtual environment with the terminal inside the Backend folder, depending on the operating system, change the command:
+source venv/bin/activate # Linux/Mac
+\venv\Scripts\activate # Windows
+7. Install backend dependencies with the terminal and the command: pip install -r requirements.txt
+8. Run main.py from the Backend>app folder. You can use the command: python -m app.main or python app/main.py
+9. For the frontend, inside the frontend folder, use the terminal with the command npm install and then npm run dev
+
+You can now use the application from the link provided in the terminal.
+## Note: In the run_app.sh script, you can see the commands to follow from step 5 to 9
+
+## Libraries and their Used Versions
+For the backend, the libraries are listed in the requirements.txt file, in the Backend>requirements.txt path.
+For the frontend, the libraries are listed in the package.json file, in the Frontend>src>package.json path.
