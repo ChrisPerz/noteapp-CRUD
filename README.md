@@ -16,16 +16,15 @@ Backend: FastAPI/Python with SQLAlchemy and PostgreSQL.
 Frontend: React with Vite.
 
 ## Installation
-Clone the repository:
-
+1. Clone the repository:
 
 git clone [https://github.com/ensolvers-github-challenges/PerezCastillo-87732d.git]
 
-Have PostgreSQL installed, it can be downloaded from: https://www.postgresql.org/download/
+2. Have PostgreSQL installed, it can be downloaded from: https://www.postgresql.org/download/
 
-Start the pgAdmin4 program, you can search for it in the Windows search bar. Then create a PostgreSQL user, the default is "postgres," it is recommended to leave it like that and set the password of your choice.
+3. Start the pgAdmin4 program, you can search for it in the Windows search bar. Then create a PostgreSQL user, the default is "postgres," it is recommended to leave it like that and set the password of your choice.
 
-Enter the downloaded Backend folder from the repository and modify the database URLs to match your local database. To do this, change the links in these files, where it is underscored:
+4. Enter the downloaded Backend folder from the repository and modify the database URLs to match your local database. To do this, change the links in these files, where it is underscored:
 
 a) alembic.ini - sqlalchemy.url
 
@@ -41,15 +40,15 @@ c) app>database.py
 
 ![image](https://github.com/ensolvers-github-challenges/PerezCastillo-87732d/assets/128911355/aa90c2e6-869e-4908-bc0d-665877802a35)
 
-6. Create a virtual environment with the terminal inside the Backend folder, depending on the operating system, change the command:
+5. Create a virtual environment with the terminal inside the Backend folder, depending on the operating system, change the command:
 source venv/bin/activate # Linux/Mac
 \venv\Scripts\activate # Windows
-7. Install backend dependencies with the terminal and the command: pip install -r requirements.txt
-8. Run main.py from the Backend>app folder. You can use the command: python -m app.main or python app/main.py
-9. For the frontend, inside the frontend folder, use the terminal with the command npm install and then npm run dev
+6. Install backend dependencies with the terminal and the command: pip install -r requirements.txt
+7. Run main.py from the Backend>app folder. You can use the command: python -m app.main or python app/main.py
+8. For the frontend, inside the frontend folder, use the terminal with the command npm install and then npm run dev
 
 You can now use the application from the link provided in the terminal.
-## Note: In the run_app.sh script, you can see the commands to follow from step 5 to 9
+**Note: In the run_app.sh script, you can see the commands to follow from step 5 to 8**
 
 ## Libraries and their Used Versions
 For the backend, the libraries are listed in the requirements.txt file, in the Backend>requirements.txt path.
