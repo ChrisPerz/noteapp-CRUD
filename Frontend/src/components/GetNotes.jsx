@@ -5,7 +5,7 @@ const NoteCard = ({ note }) => {
     <div style={{ border: '1px solid #ccc', padding: '10px', margin: '10px', width: '200px', overflowY: 'auto' }}>
       <h3>{note.title}</h3>
       <p>{note.message}</p>
-      <p style={{ fontSize: '13px' }}><strong>Tag: </strong>{note.category}</p>
+      <p style={{ fontSize: '13px' }}><strong>Category: </strong>{note.category}</p>
       <p style={{ fontSize: '13px' }}><strong>note_id:</strong> {note.id}</p>
       <p style={{ fontSize: '13px' }}><strong>is_archived:</strong> {note.is_archived ? 'True' : 'False'}</p>
     </div>
@@ -15,6 +15,7 @@ const NoteCard = ({ note }) => {
 const GetNotes = ({ isNotesUpdated }) => {
   const [notes, setNotes] = useState([]);
   const[valSelector,setValSelector]=useState("")
+  const[categoryFilter,setCategoryFilter]=useState("")
   let url=""
   const fetchNotes = async (selector) => {
     setValSelector(selector)
@@ -26,6 +27,9 @@ const GetNotes = ({ isNotesUpdated }) => {
     }
     else if (selector=="active"){
       url=`http://localhost:8000/notes/activenotes`
+    }
+    else if(selector=="categoryfilter"){
+      url=`http://localhost:8000/notes/getnotes?category=${categoryFilter}`
     }
     try {
       const response = await fetch(url);
@@ -57,7 +61,18 @@ const GetNotes = ({ isNotesUpdated }) => {
           </button>
         </div>
       </div>
-      
+
+      <div>
+        <h4>filter by category</h4>
+        <form action="">
+          <label>Category:</label>
+          <input type="text" onChange={(e)=>{setCategoryFilter(e.target.value)}}/>
+        </form>
+        <button type="button" onClick={() => fetchNotes("categoryfilter")}>
+         filter
+        </button>
+      </div>
+
       <div style={{ display: 'flex', flexWrap: 'wrap' }}>
         {notes.map((note) => (
           <NoteCard key={note.id} note={note} />
