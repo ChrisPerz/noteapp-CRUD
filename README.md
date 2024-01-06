@@ -3,6 +3,7 @@ This is a simple note-taking application created with FastAPI on the backend and
  
 ## Features
 **Create Note**: Users can create new notes by providing a title, a message, and an optional category.
+
 **Update Note**: Users can update the title, message, category, and archived status of their existing notes.
 **List Notes**: Users can view all their notes, filter by archived notes, and see only active notes.
 **Archive/Unarchive Note**: Users can change the archived status of their notes, with the option to activate.
