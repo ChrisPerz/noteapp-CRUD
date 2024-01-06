@@ -1,6 +1,6 @@
 # Notes App
 This is a simple note-taking application created with FastAPI on the backend and React on the frontend. The application allows users to create, update, archive, and view their notes.
-
+ 
 ## Features
 **Create Note**: Users can create new notes by providing a title, a message, and an optional category.
 **Update Note**: Users can update the title, message, category, and archived status of their existing notes.
